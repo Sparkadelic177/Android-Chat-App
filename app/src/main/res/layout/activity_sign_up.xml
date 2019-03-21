@@ -6,24 +6,20 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:padding="50dp"
-    tools:context=".MainActivity">
+    tools:context=".SignUp">
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
     <EditText
-        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/BtnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/login" />
+        android:inputType="textPassword"/>
 
     <Button
         android:id="@+id/BtnSignup"
