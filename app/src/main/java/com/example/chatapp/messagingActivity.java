@@ -24,13 +24,14 @@ public class messagingActivity extends AppCompatActivity {
 
     EditText etMessage;
     Button btSend;
+    Button btnLogout;
     RecyclerView rvChat;
     ArrayList<messageModel> mMessages;
     ChatAdapter mAdapter;
     // Keep track of initial load to scroll to the bottom of the ListView
     boolean mFirstLoad;
     static final int MAX_CHAT_MESSAGES_TO_SHOW = 50;
-
+    final String userId = ParseUser.getCurrentUser().getObjectId();
 
 
     @Override
@@ -40,18 +41,26 @@ public class messagingActivity extends AppCompatActivity {
 
         etMessage = findViewById(R.id.etMessage);
         btSend = findViewById(R.id.btSend);
-        rvChat = (RecyclerView) findViewById(R.id.rvChat);
+        rvChat = findViewById(R.id.rvChat);
         mMessages = new ArrayList<>();
         mFirstLoad = true;
-        final String userId = ParseUser.getCurrentUser().getObjectId();
         mAdapter = new ChatAdapter(this, userId, mMessages);
         rvChat.setAdapter(mAdapter);
+        btnLogout = findViewById(R.id.BtnLogin);
 
         // associate the LayoutManager with the RecylcerView
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setReverseLayout(true); //starting from the bottom up.
         rvChat.setLayoutManager(linearLayoutManager);
+        refreshData();
 
 
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ParseUser.logOut();
+            }
+        });
 
 
         btSend.setOnClickListener(new View.OnClickListener() {

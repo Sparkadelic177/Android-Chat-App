@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //if user did npt sign out the data will persist
         if (ParseUser.getCurrentUser() != null) {
             gotoMessagePage();
         }
