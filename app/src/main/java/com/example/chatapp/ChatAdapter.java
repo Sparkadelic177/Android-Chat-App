@@ -75,7 +75,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
             Log.e("adapter","Something when wrong here");
             e.printStackTrace();
         }
-        return "http://www.gravatar.com/avatar/" + hex + "?d=identicon";
+        return "https://www.gravatar.com/avatar/HASH";
     }
 
     @Override
