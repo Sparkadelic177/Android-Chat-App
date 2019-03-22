@@ -7,24 +7,42 @@
     android:layout_height="match_parent"
     android:padding="50dp"
     tools:context=".SignUp">
+
+    <ImageView
+        android:id="@+id/ivSignup"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Email" />
 
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Username" />
+
     <EditText
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"/>
+        android:layout_marginTop="10dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/BtnSignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/green"
+        android:textColor="@color/white"
         android:text="@string/signup" />
 
 

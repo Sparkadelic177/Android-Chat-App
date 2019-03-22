@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     EditText password;
     Button login;
     Button signup;
+    ImageView chatboxes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.etPassword);
         login = findViewById(R.id.BtnLogin);
         signup = findViewById(R.id.BtnSignup);
+        chatboxes = findViewById(R.id.ivHompage);
+
+        chatboxes.setImageResource(R.mipmap.chat_box);
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,12 +64,14 @@ public class MainActivity extends AppCompatActivity {
             public void done(ParseUser user, ParseException e) {
                 if (e != null) {
                     Log.e("App", "there was a problem logging in" + e.getMessage());
+                    Toast.makeText(MainActivity.this, "Wrong username / password", Toast.LENGTH_LONG).show();
                     return;
                 }
                 Log.d("App", "Great we have logged in");
                 gotoMessagePage();
             }
         });
+
     }
 
     private void gotoSignupPage() {

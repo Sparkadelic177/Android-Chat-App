@@ -1,5 +1,6 @@
 package com.example.chatapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -46,7 +47,7 @@ public class messagingActivity extends AppCompatActivity {
         mFirstLoad = true;
         mAdapter = new ChatAdapter(this, userId, mMessages);
         rvChat.setAdapter(mAdapter);
-        btnLogout = findViewById(R.id.BtnLogin);
+        btnLogout = findViewById(R.id.BtnLogout);
 
         // associate the LayoutManager with the RecylcerView
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -59,6 +60,9 @@ public class messagingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ParseUser.logOut();
+                Intent i = new Intent(messagingActivity.this, MainActivity.class);
+                startActivity(i);
+                finish();
             }
         });
 

@@ -5,31 +5,48 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:padding="50dp"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivHompage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Usermane" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Password"
         android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/BtnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/login" />
 
     <Button
         android:id="@+id/BtnSignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/signup" />
+        android:layout_marginTop="10dp"
+        android:background="@color/green"
+        android:text="@string/signup"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/BtnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:text="@string/login"
+        android:textColor="@color/colorPrimaryDark" />
 
 
 </LinearLayout>
