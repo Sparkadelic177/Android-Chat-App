@@ -8,7 +8,7 @@ Time spent: **2** hours spent in total
 
 The following functionality is completed:
 
-- [x] User can **sign in ** using using Parse
+- [x] User can **sign in** using using Parse
 - [x]	User can **Log in** using Parse
 - [x] User can write a message and send it
 - [x] User can view all the messages from other users
