@@ -15,6 +15,9 @@ public class parseClass extends Application {
     public void onCreate() {
         super.onCreate();
 
+        //importing the class to use as a model class for the recycler view
+        ParseObject.registerSubclass(messageModel.class);
+
         // Use for monitoring Parse network traffic
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();

@@ -4,4 +4,6 @@
     <string name="send">send</string>
     <string name="signup">SignUp</string>
     <string name="login">Login</string>
+    <string name="profile_other">my profile pic</string>
+    <string name="profile_me">other profile pic</string>
 </resources>
