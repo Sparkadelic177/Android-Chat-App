@@ -1,6 +1,6 @@
 # Android Chat App *
 
-**TwitterClone** is an simple android chat app 
+**Chat App** is an simple android chat app 
 
 Time spent: **2** hours spent in total
 
